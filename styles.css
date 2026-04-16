@@ -78,6 +78,12 @@ h1 {
   margin-top: 1rem;
 }
 
+.meta {
+  color: #93a6cc;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
 .hero-actions {
   display: flex;
   gap: 0.75rem;
@@ -141,6 +147,12 @@ p {
   gap: 1rem;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .card {
   border: 1px solid var(--border);
   background: var(--card);
@@ -160,6 +172,29 @@ p {
 
 .card-actions {
   margin-top: 1rem;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.badge {
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+  color: #c5d6ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.badge:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
 }
 
 .contact-links {
@@ -182,5 +217,13 @@ p {
 @media (max-width: 640px) {
   .nav-links {
     display: none;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-grid {
+    grid-template-columns: 1fr;
   }
 }
