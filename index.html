@@ -202,24 +202,115 @@
     </section>
 
     <section id="projects" class="section">
-      <h2>Featured Project</h2>
+      <h2>Projects</h2>
       <div class="card-grid">
+        <article class="card">
+          <h3>Enterprise AI Gateway (Secure Internal AI Portal)</h3>
+          <p>
+            Reference architecture for a secure internal “AI hub” with model allowlists, policy controls, audit hooks,
+            and pluggable providers. Supports AWS Bedrock and a local mock provider.
+          </p>
+          <ul>
+            <li>FastAPI gateway + lightweight web UI</li>
+            <li>Model allowlist, size limits, basic redaction</li>
+            <li>Provider-pluggable (Bedrock-ready)</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-small" href="projects/enterprise-ai-gateway/README.md" target="_blank" rel="noreferrer">Read Project</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>SRE Observability & SLO Kit</h3>
+          <p>
+            A minimal production-style kit: instrumented Python service, Prometheus + Grafana stack, and SLO config
+            that generates Prometheus alert rules.
+          </p>
+          <ul>
+            <li>Prometheus metrics + Grafana provisioning</li>
+            <li>SLO config → generated alert rules</li>
+            <li>Docker Compose local stack</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-small" href="projects/sre-observability-slo-kit/README.md" target="_blank" rel="noreferrer">Read Project</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>SRE Incident Automation CLI</h3>
+          <p>
+            A small CLI to standardize incident response artifacts (incident log, timeline, postmortem).
+            Demonstrates on-call automation and repeatable incident hygiene.
+          </p>
+          <ul>
+            <li>Consistent incident folders and templates</li>
+            <li>Timeline event tooling</li>
+            <li>Docker optional</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-small" href="projects/sre-incident-automation-cli/README.md" target="_blank" rel="noreferrer">Read Project</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>ML Drift Monitoring Service (AI/ML + SRE)</h3>
+          <p>
+            End-to-end inference API with Prometheus metrics and a lightweight drift score computed against a baseline
+            feature distribution built at training time.
+          </p>
+          <ul>
+            <li>Training step → model + baseline</li>
+            <li>Online drift scoring + metrics</li>
+            <li>Prometheus in Docker Compose</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-small" href="projects/ml-drift-monitoring-service/README.md" target="_blank" rel="noreferrer">Read Project</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Cloud Cost Analytics ETL (Data)</h3>
+          <p>
+            ETL example for cloud cost analytics: normalizes AWS/GCP cost exports into DuckDB, runs data quality checks,
+            and produces cost summaries and anomaly outputs.
+          </p>
+          <ul>
+            <li>DuckDB + Pandas ELT</li>
+            <li>Quality report (schema + invariants)</li>
+            <li>Aggregates and anomaly detection</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-small" href="projects/cloud-cost-analytics-etl/README.md" target="_blank" rel="noreferrer">Read Project</a>
+          </div>
+        </article>
+
         <article class="card">
           <h3>Legal AI Text Classifier API</h3>
           <p>
-            End-to-end ML API that classifies legal text into Contract, Litigation, and Compliance.
-            Built with FastAPI + Scikit-learn, containerized with Docker, and deployable on AWS
-            using Terraform.
+            ML API that classifies legal text into Contract, Litigation, and Compliance.
+            Containerized with Docker and deployable on AWS using Terraform.
           </p>
           <ul>
-            <li>Python, FastAPI, Scikit-learn, Pandas</li>
+            <li>FastAPI + Scikit-learn</li>
             <li>Docker + Terraform + AWS App Runner/ECR</li>
-            <li>SRE-ready architecture and deployment flow</li>
           </ul>
           <div class="card-actions">
             <a class="btn btn-small" href="legal_ai_classifier/README.md" target="_blank" rel="noreferrer">Read Project</a>
           </div>
         </article>
+      </div>
+
+      <div class="card card-spaced">
+        <h3>White-label AI Portal Options</h3>
+        <p>
+          For a reusable “internal AI portal” across companies, a common pattern is: (1) a branded UI, plus (2) a policy
+          gateway that enforces allowlists, logging, and redaction across providers (Bedrock or others).
+        </p>
+        <ul>
+          <li>Chat UI: LibreChat / Open WebUI (white-label, self-host)</li>
+          <li>App builder (workflows + RAG): Dify (more features, more complexity)</li>
+          <li>Gateway: keep policy and audit in your control for portability</li>
+        </ul>
       </div>
     </section>
 

@@ -1,0 +1,9 @@
+service: sre-observability-slo-kit
+slos:
+  - name: availability
+    objective: 0.999
+    labels:
+      team: platform
+    sli:
+      good: sum(rate(http_requests_total{status!~"5.."}[5m]))
+      total: sum(rate(http_requests_total[5m]))

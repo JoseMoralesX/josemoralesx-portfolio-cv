@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise AI Gateway</title>
+  <link rel="stylesheet" href="/ui/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="container">
+      <h1>Enterprise AI Gateway</h1>
+      <p class="muted">Secure internal chat portal with model allowlists and policy controls.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <label for="model">Model</label>
+      <select id="model"></select>
+    </section>
+
+    <section class="panel">
+      <div class="chat" id="chat"></div>
+      <div class="composer">
+        <textarea id="prompt" rows="3" placeholder="Write a request..."></textarea>
+        <button id="send">Send</button>
+      </div>
+      <p class="hint">Policy: inputs may be redacted for secrets before calling a provider.</p>
+    </section>
+  </main>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>

@@ -160,6 +160,10 @@ p {
   padding: 1rem 1.1rem;
 }
 
+.card-spaced {
+  margin-top: 1rem;
+}
+
 .card h3 {
   margin: 0 0 0.6rem;
 }
@@ -225,5 +229,11 @@ p {
 
   .badge-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 860px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }

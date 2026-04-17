@@ -1,0 +1,26 @@
+{
+  "max_input_chars": 8000,
+  "redaction": {
+    "enabled": true
+  },
+  "models": [
+    {
+      "id": "mock-small",
+      "provider": "mock",
+      "display_name": "Mock Small",
+      "max_output_tokens": 256
+    },
+    {
+      "id": "mock-large",
+      "provider": "mock",
+      "display_name": "Mock Large",
+      "max_output_tokens": 512
+    },
+    {
+      "id": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+      "provider": "bedrock",
+      "display_name": "Claude 3.5 Sonnet (Bedrock)",
+      "max_output_tokens": 512
+    }
+  ]
+}

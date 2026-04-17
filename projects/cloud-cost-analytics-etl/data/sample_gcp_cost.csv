@@ -1,0 +1,7 @@
+date,project_id,service,sku,cost_usd
+2026-04-01,proj-analytics,BigQuery,Analysis,7.90
+2026-04-01,proj-analytics,Cloud Storage,Standard Storage,0.62
+2026-04-02,proj-analytics,BigQuery,Analysis,8.35
+2026-04-02,proj-analytics,Cloud Storage,Standard Storage,0.65
+2026-04-03,proj-analytics,BigQuery,Analysis,16.70
+2026-04-03,proj-analytics,Cloud Storage,Standard Storage,0.66

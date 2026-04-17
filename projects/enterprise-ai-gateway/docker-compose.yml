@@ -1,0 +1,8 @@
+services:
+  gateway:
+    build:
+      context: .
+    environment:
+      - AWS_REGION=us-east-1
+    ports:
+      - "8100:8100"

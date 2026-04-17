@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+    ports:
+      - "8090:8090"
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - "9091:9090"
+    depends_on:
+      - api
