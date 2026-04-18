@@ -45,3 +45,8 @@ yarn-error.log*
 # Personal CV files
 *.docx
 *.pdf
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
